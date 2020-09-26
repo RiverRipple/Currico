@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<link href="CurricoInterestsStylesheet.css" rel="stylesheet">
+
+<form action="#" style="border:1px solid #ccc" method="get"> <!--Change the action attribute to the Map API location-->
+    <div class="container">
+      <h1>Select All Your Interests Here!</h1>
+      <p>We will use this information to help you find opportunities near you</p>
+      <hr>
+  
+      <label for="adr"><b>Enter Your Street Address</b></label>
+      <input type="text" id="adr" name="address" placeholder="1600 Amphitheatre Parkway, Mountain View, CA">
+
+
+      <label for="phone"><b>Phone Number:</b></label>
+      <input type="tel" id = "num" placeholder="Ex. 123-45-678" name="phone">
+
+      <br>
+      <br>
+    
+    <div class="checkboxmain">
+        <h3>Select All Your Interests:</h3>
+        <div class="checkboxcontent">
+            <input type="checkbox" id="interest1" name="interest1" value="science">
+            <label class="forcheckbox" for="interest1"> Science</label><br>
+            <input type="checkbox" id="interest2" name="interest2" value="programming">
+            <label class="forcheckbox" for="interest2"> Programming</label><br>
+            <input type="checkbox" id="interest3" name="interest3" value="art">
+            <label class="forcheckbox" for="interest3"> Art</label><br>
+            <input type="checkbox" id="interest4" name="interest4" value="sports">
+            <label class="forcheckbox" for="interest4"> Sports</label><br>
+            <input type="checkbox" id="interest5" name="interest5" value="music">
+            <label class="forcheckbox" for="interest5"> Music</label><br>
+            <input type="checkbox" id="interest6" name="interest6" value="tutoring">
+            <label class="forcheckbox" for="interest6"> Tutoring</label>
+        </div>
+    </div>
+    
+      <br>
+      <br>
+
+      <div class="features">
+        <button type="button" class="cancelbtn"><a href="CurricoWebsite.html">Back</a></button> <!--Change submitbtn class in css-->
+        <input type="button" id="sub" value="Submit" onclick="saveFile()">
+        <input type="reset" value="Reset">
+      </div>
+    </div>
+  </form>
+  <script>
+    let saveFile = () => {
+    var adr = document.getElementById('adr');
+    var newadr = adr.value.split(' ').join('+');
+    const int = [document.getElementById('interest1'), document.getElementById('interest2'), document.getElementById('interest3'), 
+    document.getElementById('interest4'), document.getElementById('interest5'), document.getElementById('interest6')];
+    
+    // This variable stores all the data.
+    let data = 
+        '\r Address: ' + newadr;
+    let data2 = '\r Address: ' + adr.value;
+    localStorage.setItem('data', data);
+    localStorage.setItem('data2', data2);
+    }
+  </script>

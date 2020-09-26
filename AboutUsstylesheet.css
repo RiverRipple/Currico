@@ -1,0 +1,230 @@
+html {
+    background-color: #608699;
+    line-height: 1.7;
+  }
+  
+  body {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-top: 0;
+  }
+  
+  .section img{
+    position: relative;
+    padding-left: 825px;
+    padding-top: 80px;
+    position: relative; 
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .site-nav a {
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #365267;
+    transition-property: color, background-color;
+    transition-duration: 1s;
+  }
+  
+  .site-nav a:hover {
+    background-color: #fff;
+    color: #2c465a;
+  }
+  
+  /* Main Column Typography */
+  .main-area h2 {
+    font-size: 165%;
+    font-weight: normal;
+  }
+  
+  .section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  @media screen and (min-width: 1280px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .container {
+      max-width: 1200px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .section {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  
+  header {
+    height: 375px;
+    padding-top: 20px;
+    color: #fff;
+    background-color: #405c71;
+    background-image: url(https://cdn.discordapp.com/attachments/756341797248172063/756719505505255495/1ykmiWnyNJKmsqTlNPBfYPA.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 165%;
+  }
+  
+  header p {
+    font-size: 90%;
+    margin: 0;
+  }
+  
+  /* Site Navigation */
+  .site-nav {
+    margin-top: 40px;
+  }
+  
+  .site-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .site-nav li {
+    list-style: none;
+    float: left;
+    margin-right: 5px;
+  }
+  
+  .site-nav a {
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #365267;
+    border-radius: 15px 15px 0px 0px;
+  }
+  
+  .site-nav a:hover {
+    background-color: white;
+    color:#2c465a
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .site-nav li {
+      width: 33.332%;
+      margin-right: 0;
+    }
+  
+    .site-nav a {
+      padding: 15px 0;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .site-nav li {
+      width: 50%;
+    }
+  }
+  
+  /* End Site Navigation */
+  
+  .meettheteam{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #61B6C9;
+    width: 25%;
+    top: 6px;
+    position: relative;
+    border-radius: 15px;
+  }
+  
+  h1{
+    text-align: center;
+    text-shadow: 2px 2px gray;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .fixed-size-container {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    background-color: #B0C4DE;
+    background-image: url(https://cdn.discordapp.com/attachments/756341797248172063/756719505505255495/1ykmiWnyNJKmsqTlNPBfYPA.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    padding: 30px 0;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  
+  .fixed-size {
+    width: 363px;
+    height: 337px;
+    background-color: #990b47;
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    transition: width 1s, height 1s;
+  }
+  
+  .fixed-size img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .namebox{
+    position: relative;
+    color: black;
+    width: 40%;
+    display: inline-block;
+    font-size: 35%;
+    bottom: 80px;
+    height: 25%;
+  }
+  
+  .fixed-size:hover{
+    width: 380px;
+    height: 360px;
+  }
+  
+  
+  footer {
+    text-align: center;
+    font-size: 85%;
+    color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
