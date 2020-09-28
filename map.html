@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      ohwi
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB48EZThpH3RkpQlTcyJG9L1IAALHxiCgI&callback=initMap&libraries=places"></script>
+    </script>
+
+    <script>
+    var map;
+    var service;
+    var infoWindow;
+
+    function initialize() {
+    var new_york = new google.maps.LatLng(40.730610, -73.935242);
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: new_york,
+        zoom: 15,
+      });
+
+    var request = {
+      location: new_york,
+      radius: '32186',
+      type: ['school']
+    };
+
+
+    infoWindow = new google.maps.InfoWindow();
+
+    service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
+  }
+    function callback(results, status)
+    {
+    if (status == google.maps.places.PlacesServiceStatus.OK)
+    {
+      for (var i = 0; i < results.length; i++)
+      {
+        createMarker(results[i]);
+      }
+    }
+    }
+
+    function createMarker(place){
+      var placeLoc = place.geometry.location;
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+      });
+
+      google.maps.event.addListener(marker, 'click', function(){
+        infoWindow.setContent(place.name);
+        infoWindow.open(map, marker);
+      });
+      //return marker;
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize)
+    </script>
+    <style>
+      html, body, #map{
+        height:100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map">
+    </div>
+  </body>
+</html>
