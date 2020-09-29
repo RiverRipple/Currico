@@ -4,9 +4,11 @@
     <title>
       ohwi
     </title>
+    <Button onclick='geocode()'>PLZ WORK</Button>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB48EZThpH3RkpQlTcyJG9L1IAALHxiCgI&callback=initMap&libraries=places"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </script>
 
     <script>
@@ -59,7 +61,31 @@
       //return marker;
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize)
+    //google.maps.event.addDomListener(window, 'load', initialize)
+    </script>
+    <script>
+      let printAddress = () => {
+        var addy = localStorage.getItem('data')
+        var addy2 = localStorage.getItem('data2')
+        console.log(addy);
+        console.log(addy2);
+      }
+
+      function geocode(){
+        var location = "191 Hunyadi Avenue Fairfield CT"
+        axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+          params:{
+            address:location,
+            key:'AIzaSyB-AkXL3aSqBLXJ80MiwiS-nn4lpiPhvmM'
+          }
+        })
+        .then(function(response){
+          console.log(response)
+        })
+        .catch(function(error){
+          console.log(error)
+        });
+      }
     </script>
     <style>
       html, body, #map{
